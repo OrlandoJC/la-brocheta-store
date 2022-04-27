@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brocheta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header__container container">
+
+            <div class="logo">
+                <img src="https://labrocheta.netlify.app/assets/img/icons/logo.png" alt="" width="50px">
+            </div>
+
+            <div class="header__group">
+                <div class="header__bar">
+                    <input class="hedaer__finder" id=search type="text" placeholder="Buscar..">
+                    <button class="bar__search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="cart" id="cart">
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito: <span id="cart__counter">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="cart__products" id="cart__panel">
+        <span class="cart__button-close" id="cart__close">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <h2 class="cart__title">Tu carrito</h2>
+        <div id="cart__container">
+            <!-- <div class="cart__item">
+                <img src="https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-732x549-thumbnail.jpg"
+                    alt="">
+                <div class="cart__info">
+                    <p> <b> Chilli Master Burger</b></p>
+                    <span>230 mxn</span>
+                </div>
+                <span class="delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                </span>
+            </div> -->
+        </div>
+
+        <div class="cart__total" id="cart__total">
+            Ir a pagar 
+        </div>
+
+    </div>
+    <main class="main">
+        <section class="information">
+            <div class="information__categories container">
+                <h1>Categorias</h1>
+                <div class="categories__container" id="categories">
+                    <div class="category btn-orange">todo</div>
+                    <div class="category">entrada</div>
+                    <div class="category">ensaladas</div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container products__container" id="products__container">
+                <!-- <div class="card">
+                    <div class="card__image">
+                        <img src="https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-732x549-thumbnail.jpg"
+                            alt="">
+                    </div>
+
+                    <div class="card__info">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+                            corrupti. </p>
+                        <span> <b>12 mxn</b> </span>
+                    </div>
+                    <span class="card__button-add"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPpoMexvUDLUUZelVOaz-7kY5F0GWT3GBuLtc8XyPo59BNBa1tnp_OqUm-_yZgrJnc1E&usqp=CAU"
+                            alt="">
+                    </div>
+
+                    <div class="card__info">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+                            corrupti.</p>
+                        <span> <b>$34.00</b> </span>
+                    </div>
+                    <span class="card__button-add"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/4/25/0/HE_Vegetable-Fruit-Laydown_s4x3.jpg.rend.hgtvcom.616.462.suffix/1524672252354.jpeg"
+                            alt="">
+                    </div>
+
+                    <div class="card__info">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+                            corrupti.</p>
+                        <span> <b>12 mxn</b> </span>
+                    </div>
+                    <span class="card__button-add"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="https://www.nomeatathlete.com/wp-content/uploads/2015/03/make-it-stick.jpg" alt="">
+                    </div>
+
+                    <div class="card__info">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="card__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+                            corrupti.</p>
+                        <span> <b>12 mxn</b> </span>
+                    </div>
+                    <span class="card__button-add"><i class="fa-solid fa-plus"></i></span>
+                </div> -->
+            </div>
+        </section>
+        <section id="action">
+            <div class="action__container container">
+            </div>
+        </section>
+    </main>
+
+    <div class="modal">
+        <div class="modal__title"></div>
+        <div class="modal__body">
+            <div class="modal__image">
+
+            </div>
+            <div class="modal__info">
+
+            </div>
+        </div>
+        <div class="modal__footer"></div>
+    </div>
+
+
+    <footer class="footer ">
+        <div class="footer__container container">
+            <div class="footer__resume">
+                <div class="title__resume">
+                    <p>Visitanos en nuestras redes sociales</p>
+                </div>
+
+                <ul class="social__list">
+                    <li class="social__item">
+                        <img src="https://raw.githubusercontent.com/OrlandoJC/la-brocheta-project/ed0f3d79b2a9a28e58834981e743adc48350e89c/assets/img/icons/facebook.png"
+                            width="50px" height="50px" alt="icono de facebook">
+                    </li>
+                    <li class="social__item">
+                        <img src="https://raw.githubusercontent.com/OrlandoJC/la-brocheta-project/ed0f3d79b2a9a28e58834981e743adc48350e89c/assets/img/icons/twitter.png"
+                            width="50px" height="50px" alt="icono de twitter">
+                    </li>
+                    <li class="social__item">
+                        <img src="https://raw.githubusercontent.com/OrlandoJC/la-brocheta-project/ed0f3d79b2a9a28e58834981e743adc48350e89c/assets/img/icons/instagram.png"
+                            width="50px" height="50px" alt="icono de instagram">
+                    </li>
+                    <li class="social__item">
+                        <img src="https://raw.githubusercontent.com/OrlandoJC/la-brocheta-project/ed0f3d79b2a9a28e58834981e743adc48350e89c/assets/img/icons/whatsapp.png"
+                            width="50px" height="50px" alt="icono de whatsapp">
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__popular">
+                <h4 class="footer__subtitle">Lugares mas visitados</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">CDMX</li>
+                    <li class="footer__item">YUCATAN</li>
+                    <li class="footer__item">Quintana Roo</li>
+                    <li class="footer__item">Baja California</li>
+                </ul>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__subtitle">Links de utilidad</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Inicio</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Nosotros</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Ubicacion</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Galeria</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4 class="footer__subtitle">Informacion de contacto</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">0180089721</li>
+                    <li class="footer__item">labrocheta@gmail.com</li>
+                    <li class="footer__item">Mexico</li>
+                    <li class="footer__item">www.info.brocheta.com</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

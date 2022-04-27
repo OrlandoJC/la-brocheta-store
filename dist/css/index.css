@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+    box-shadow: rgb(230, 235, 241) 0px 1px 0px 0px;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.header__mode {
+    align-self: center;
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__container {
+    margin: 0 auto;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__group {
+    align-self: center;
+    display: flex;
+    flex-flow: row;
+    gap: 80px;
+    align-items: center;
+}
+
+.header__bar input {
+    width: 300px;
+    /* height: 42px; */
+    padding: 14px;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    outline: none;
+}
+
+.header__bar button {
+    border: none;
+    border-radius: 5px;
+    background-color: #ec3e53;
+    color: white;
+    align-self: center;
+}
+
+.bar__search i {
+    padding: 14px;
+}
+
+.cart {
+    background: #ec3c52;
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 15px;
+    color: white;
+    width: 120px;
+}
+
+main {
+    padding-top: 10px;
+}
+
+.products {
+    background: rgb(249 246 246);
+    padding: 20px 0;
+}
+
+.products__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.card {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 30px -10px rgba(94, 96, 97, 0.5);
+    position: relative;
+}
+
+.card .card__image>img {
+    width: 100%;
+}
+
+.card__info {
+    padding: 0px 5px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: space-between;
+}
+
+.card__title {
+    font-size: 1.1rem;
+}
+
+.card__paragraph {
+    color: rgb(60, 60, 60);
+}
+
+.card__button-add {
+    width: 40px;
+    height: 40px;
+    background: #ec3c52;
+    color: white;
+    border-radius: 50px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart__products {
+    width: 300px;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    padding-bottom: 10px;
+    z-index: 1;
+    transition: 0.6s;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    overflow-y: scroll;
+
+}
+
+.cart__info p {
+    font-size: .9rem;
+}
+
+.cart__info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart__subtext {
+    font-size: .8rem;
+}
+
+.cart__button-close {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.cart__item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gainsboro;
+    border-top: none;
+    padding: 12px 10px;
+    gap: 20px;
+    margin-top: 0px;
+}
+
+.cart__item img {
+    width: 20%;
+}
+
+.cart__open {
+    right: 0;
+}
+
+.cart__title {
+    padding-left: 10px;
+}
+
+.cart__total {
+    width: 90%;
+    background: rgb(41, 216, 132);
+    margin: 0 auto;
+    padding: 15px 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.information {
+    margin: 20px 0px;
+}
+
+.categories__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category {
+    background: white;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.category:hover {
+    background-image: linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%);
+    color: white;
+}
+
+.btn-orange {
+    background-image: linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%);
+    color: white;
+}
+
+.btn-red {
+    background-image: linear-gradient(to right, #e53935 0%, #e35d5b 51%, #e53935 100%)
+}
+
+.btn-gray {
+    background-image: linear-gradient(to right, #606c88 0%, #3f4c6b 51%, #606c88 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.action__container {
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 1vw;
+    /* THIS WILL RESET THE DEFAULT SCORLLBAR STYLING */
+}
+
+/* TO STYLE THE SCROLLBAR TRACK */
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    /* THIS WILL SET THE COLOR OF THE SCROLLBAR TRACK */
+}
+
+/* TO STYLE THE SCROLLBAR THUMB */
+::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+    border: 0.3vw solid #ffffff;
+    border-radius: 5vw;
+}
+
+
+.footer {
+    background: #eff0f0;
+    width: 100%;
+    font-size: .8rem;
+    padding: 40px 0px;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "resumen popular links contact" "resumen popular links contact";
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.footer__title {
+    font-size: 1.3rem;
+}
+
+.footer__newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: news;
+}
+
+.footer__resume {
+    grid-area: resumen;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.footer__popular {
+    grid-area: popular;
+    justify-self: center;
+}
+
+.footer__links {
+    grid-area: links;
+    justify-self: center;
+}
+
+.footer__contact {
+    grid-area: contact;
+    justify-self: center;
+}
+
+.footer__social {
+    width: 30%;
+    display: inline-block;
+}
+
+.footer__subtitle {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer .title__resume {
+    display: inline-block;
+}
+
+.footer__item {
+    line-height: 1.9;
+    list-style: none;
+}
+
+.footer__form {
+    background: white;
+    display: flex;
+    padding: 10px;
+    column-gap: 10px;
+    width: 50%;
+    grid-area: form;
+    width: 50%;
+    height: 80px;
+    align-self: center;
+}
+
+.footer__input {
+    width: 100%;
+}
+
+.footer__callout {
+    margin: 10px 0px;
+}
+
+.footer .social__list {
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.footer .social__item {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer .social__item img {
+    width: 43px;
+    height: auto;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 590.98px) {
+    .footer__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas:"resumen resumen" "popular popular" "links links" "contact contact";
+        row-gap: 20px;
+    }
+
+    .footer__resume {
+        align-self: start;
+    }
+
+    .footer__popular {
+        justify-self: start;
+    }
+
+    .footer__links {
+        justify-self: start;
+    }
+
+    .footer__contact {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 820.98px) {
+    .hedaer__finder {
+        display: none;
+        justify-self: center;
+    }
+
+    .categories__container {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
