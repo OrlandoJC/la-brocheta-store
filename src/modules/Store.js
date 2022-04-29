@@ -1,6 +1,6 @@
 class Store {
-    constructor() {
-        this.products = []
+    constructor(dataStore) {
+        this.products = [...dataStore.data]
     }
 
     find(id) {

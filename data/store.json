@@ -1,0 +1,68 @@
+{
+    "data" : [
+        {
+            "id": 1,
+            "name": "Tribu Pack",
+            "description": "Platillo perfecto para compartir y disfrutar de nuevos sabores",
+            "ingredients": [],
+            "price": 259,
+            "category": "entrada"
+        },
+        {
+            "id": 2,
+            "name": "QUESADILLAS BÚFALO",
+            "description": "Quesadilla elaborada a base de queso gouda rallado.",
+            "ingredients": [],
+            "price": 100,
+            "category": "entradas"
+        },
+        {
+            "id": 3,
+            "name": "DEDOS DE POLLO (6PZAS)",
+            "description": "eliciosos 180 gr de pechuga de pollo empanizada..",
+            "ingredients": [],
+            "price": 240,
+            "category": "entrada"
+        },
+        {
+            "id": 4,
+            "name": "POLLO PARMESANO",
+            "description": "Deliciosos 180 gr de pechuga de pollo empanizada, gratinada con queso Gouda sobre una cama de pasta",
+            "ingredients": [],
+            "price": 300,
+            "category": "entrada"
+        },
+        {
+            "id": 5,
+            "name": "ENSALADA CÉSAR",
+            "description": "Lechuga larga aderezada al estilo césar con croutones y queso parmesano..",
+            "ingredients": [],
+            "price": 110,
+            "category": "ensaladas"
+        },
+        {
+            "id": 6,
+            "name": "ENSALADA LEMON",
+            "description": "Rica mezcla de lechugas, granos de elotes, aguacate, frituras de maíz, zanahoria rayada, col morada",
+            "ingredients": [],
+            "price": 100,
+            "category": "ensaladas"
+        },
+        {
+            "id": 7,
+            "name": "FUSILLI ARRABIATA",
+            "description": "Rica pasta al dente, salteada con aceitunas negras, ajo, cebolla y tocino, con un toque de salsa de tomate",
+            "ingredients": [],
+            "price": 120,
+            "category": "clasico"
+        },
+        {
+            "id": 8,
+            "name": "CHEESE BURGER",
+            "description": "180gr Carne la parrilla con tocino, queso cheddar, cebolla, pepinillo, tomate y lechuga.",
+            "ingredients": [],
+            "price": 140,
+            "category": "hamburgesas"
+        }
+    ]
+}

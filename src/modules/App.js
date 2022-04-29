@@ -1,26 +1,19 @@
+import dataStore from '../../data/store.json';
 import Store from "./Store"
 import Cart from "./Cart"
 import Dish from "./Dish"
 
 class App {
     constructor() {
-        this.store = new Store()
-        this.cart = new Cart()
-        this.store.insertProduct(new Dish(1, "Tribu Pack", "Platillo perfecto para compartir y disfrutar de nuevos sabores", [], 259, "entrada", "b1a3ef04e36442fecbfdad3f23d041fa"))
-        this.store.insertProduct(new Dish(2, "QUESADILLAS BÚFALO", "DQuesadilla elaborada a base de queso gouda rallado.", [], 100, "entradas", "e22fd5e0c31b7225357bc2e2cd14c60f"))
-        this.store.insertProduct(new Dish(3, "DEDOS DE POLLO (6PZAS)", "eliciosos 180 gr de pechuga de pollo empanizada..", [], 240, "entrada"))
-        this.store.insertProduct(new Dish(4, "POLLO PARMESANO", "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, corrupti.", [], 300, "entrada"))
-        this.store.insertProduct(new Dish(5, "ENSALADA CÉSAR", "Lechuga larga aderezada al estilo césar con croutones y queso parmesano..", [], 110, "ensaladas"))
-        this.store.insertProduct(new Dish(6, "ENSALADA LEMON", "Rica mezcla de lechugas, granos de elotes, aguacate, frituras de maíz, zanahoria rayada, col morada", [], 1, "ensaladas"))
-        this.store.insertProduct(new Dish(7, "FUSILLI ARRABIATA", "Rica pasta al dente, salteada con aceitunas negras, ajo, cebolla y tocino, con un toque de salsa de tomate", [], 12, ""))
-        this.store.insertProduct(new Dish(8, "CHEESE BURGER", "180gr Carne la parrilla con tocino, queso cheddar, cebolla, pepinillo, tomate y lechuga.", [], 33, ""))
+        this.store = new Store(dataStore)
+        this.cart = new Cart()       
     }
 
     cardMarkup({ id, name, description, price }) {
         return `
             <div class="card" data-product-id = ${id}>
-                <div class="card__image">
-                    <img src="https://picsum.photos/600/400?random=${id}" alt="">
+                <div class="card__image">   
+                    <img src="assets/${id}.jpg"  alt="">
                 </div>
 
                 <div class="card__info">
@@ -37,7 +30,7 @@ class App {
         return `
             <div class="cart__item" data-cart-id = ${id}>
                 <div class="cart__info">
-                <img src="https://picsum.photos/600/400?random=${id}" alt="">
+                <img src="assets/${id}.jpg" alt="">
                     <div>
                         <p> ${number} x 1 ${name}</p>
                         <span> <b>$ </b> ${number * price}</span>
@@ -90,8 +83,10 @@ class App {
         this.setLocal(this.cart.products)
     }
 
-    removeFromCartUI(nodeItem, cartContainer) {
+    removeFromCartUI(nodeItem, cartContainer, cartCounter, cartTotal) {
         cartContainer.removeChild(nodeItem)
+        cartCounter.textContent = this.cart.len()
+        cartTotal.textContent = this.cart.getTotal()
     }
 
     filterByUI(category, root) {
@@ -111,6 +106,7 @@ class App {
 
         cartNode.textContent = this.cart.size()
         cartContainer.innerHTML = ""
+        cartTotal.textContent = this.cart.totalPrice()
 
         for (let cartItem of this.cart.get()) {
             cartContainer.innerHTML += this.cartItemMarkup(cartItem)

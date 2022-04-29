@@ -2,16 +2,18 @@ import App from './modules/App'
 
 const restaurant = new App()
 
-const root = document.getElementById('products__container');
-const cartIcon = document.getElementById('cart')
-const cartPanel = document.getElementById('cart__panel')
-const cartClose = document.getElementById('cart__close');
-const cartCounter = document.getElementById('cart__counter')
-const cartContainer = document.getElementById('cart__container')
+const root            = document.getElementById('products__container');
+const cartIcon        = document.getElementById('cart')
+const cartPanel       = document.getElementById('cart__panel')
+const cartClose       = document.getElementById('cart__close');
+const cartCounter     = document.getElementById('cart__counter')
+const cartContainer   = document.getElementById('cart__container')
 const categoryOptions = document.getElementById('categories')
-const findInput = document.getElementById('search')
-const cartTotal = document.getElementById('cart__total')
-let inputTimeOut = null;
+const findInput       = document.getElementById('search')
+const cartTotal       = document.getElementById('cart__total')
+const buttonPay       = document.getElementById('button__pay')
+const layerPay        = document.getElementById('layer__payment')
+let inputTimeOut      = null;
 
 cartIcon.addEventListener('click', () => {
     cartPanel.classList.add('cart__open')
@@ -19,8 +21,13 @@ cartIcon.addEventListener('click', () => {
 
 cartClose.addEventListener('click', () => {
     cartPanel.classList.remove('cart__open')
-
 })
+
+// buttonPay.addEventListener('click', () => {
+//   layerPay.classList.add('show')
+//   cartPanel.classList.remove('cart__open')
+//   document.body.style.overflow = "hidden"
+// })
 
 findInput.addEventListener('input', () => {
     clearTimeout(inputTimeOut);
@@ -52,10 +59,6 @@ findInput.addEventListener('input', () => {
     }, 1000);
 })
 
-findInput.addEventListener('change', () => {
-    console.log(findInput.value)
-})
-
 categoryOptions.addEventListener('click', (e) => {
     const { target } = e;
 
@@ -74,7 +77,7 @@ cartContainer.addEventListener('click', (e) => {
         let nodeItem = target.closest('.cart__item');
         let id = nodeItem.dataset.cartId;
         restaurant.removeFromCart(id)
-        restaurant.removeFromCartUI(nodeItem, cartContainer)
+        restaurant.removeFromCartUI(nodeItem, cartContainer, cartCounter, cartTotal)
         Toastify({
             text: "Producto eliminado del carrito 👻",
             duration: 4000,

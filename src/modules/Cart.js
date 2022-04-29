@@ -64,6 +64,10 @@ class Cart {
         return this.products.reduce((acc, prod) => acc + prod.number, 0)
     }
 
+    len() {
+        return this.products.length
+    }
+
     exists(id) {
         const found = this.products.find(product => product.id === parseInt(id))
         return !!found;
@@ -78,7 +82,7 @@ class Cart {
     }
 
     totalPrice() {
-        return this.products.reduce((acc, product) => acc + product.price, 0)
+        return this.products.reduce((acc, product) => acc + product.price * product.number, 0)
     }
 }
 
