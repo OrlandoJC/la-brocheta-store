@@ -1,4 +1,4 @@
 # la-brocheta-store
 
-[![WCwOyx.th.png](https://iili.io/WCwOyx.th.png)](https://freeimage.host/i/WCwOyx)
+![app](https://iili.io/WCwOyx.png)
 
